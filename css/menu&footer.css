@@ -1,0 +1,136 @@
+/* Menú */
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #ef5350;
+  color: white;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+/* End Header */
+
+/* Logo */
+.logo {
+  width: 8rem;
+  height: auto;
+}
+/* End Logo */
+
+/* Nav */
+.header__nav {
+  display: flex;
+}
+
+.header__nav-list {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.header__nav-link {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.header__nav-link.active {
+  color: #feca1b;
+}
+
+.header__nav-link:hover {
+  color: #3761a8;  
+}
+
+.header__nav-link:focus {
+  color: #3761a8;
+  outline: none;
+}
+/* End Nav */
+
+/* Toogler */
+.header__toggler {
+  display: none;
+  font-size: 1rem;
+  background: none;
+  border: none;
+  color: #3761a8;
+  cursor: pointer;
+  position: relative;
+}
+
+.header__toggler-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  transition: opacity 0.3s ease;
+}
+
+.header__toggler-icon--close {
+  opacity: 0; /* Icono de "close" oculto por defecto */
+}
+
+.header__toggler--active .header__toggler-icon--menu {
+  opacity: 0; /* Mostrar "close" cuando el menú está abierto, icono "menu" no aparece */
+}
+
+.header__toggler--active .header__toggler-icon--close {
+  opacity: 1; /* Mostrar "menu" cuando el menú está cerrado, icono "close" no aparece */
+}
+/* End Toogler */
+
+/* Footer */
+.footer {
+  background: #ef5350;
+  color: white;
+  font-weight: bold;
+  padding: 1rem 0;
+  text-align: center;
+  font-size: 0.9em;
+  width: 100%;
+}
+
+.footer__info {
+  margin: 0;
+}
+/* End Footer */
+
+/* Responsive */
+@media (max-width: 768px) {
+  /* Nav */
+  .header__nav {
+    display: none;
+    position: absolute;
+    top: 5.3rem;
+    right: 0;
+    background: #ef5350;
+    width: 100%;
+    text-align: center;
+    padding: 0.6rem 0;
+  }
+
+  .header__nav-list {
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  .header__nav--active {
+    display: block;
+  }
+  /* End Nav */
+
+  /* Toggler */
+  .header__toggler {
+    display: block;
+  }
+  /* End Toggler */
+}
+/* End Responsive */
