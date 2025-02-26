@@ -1,0 +1,90 @@
+/* Estilos generales para el contenedor */
+#game-container {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #333;
+}
+
+/* Estilos para la silueta del Pokémon */
+#pokemon-silhouette {
+  margin: 20px 0;
+}
+
+#pokemon-image {
+  width: 300px;
+  height: 300px;
+  object-fit: contain;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+}
+
+/* Estilos para las letras a adivinar */
+#word-to-guess {
+  font-size: 2rem;
+  margin: 20px 0;
+  font-weight: bold;
+}
+
+#word-to-guess span {
+  margin: 0 10px;
+  padding: 10px;
+  font-size: 2rem;
+  border-bottom: 2px solid #333;
+  display: inline-block;
+}
+
+/* Estilos para las letras del abecedario */
+#alphabet {
+  margin: 20px 0;
+}
+
+#alphabet button {
+  font-size: 1.2rem;
+  padding: 10px 15px;
+  margin: 5px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#alphabet button:hover {
+  background-color: #0056b3;
+}
+
+#alphabet button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+/* Estilos para el contenedor del ahorcado */
+#hangman {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#hangman img {
+  width: 200px;
+  height: 200px;
+}
+
+#pokemon-image {
+    filter: grayscale(0) brightness(0) contrast(0) invert(1);
+    height: auto;
+    object-fit: cover;
+  }
+  

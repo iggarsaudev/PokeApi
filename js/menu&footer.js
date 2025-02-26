@@ -5,23 +5,23 @@ const header = document.getElementById("header")
 
 salida = `
     <div class="header__logo">
-        <img src="./img/logo.png" alt="Logo PokeApi" class="logo">
+        <img src="../img/logo.png" alt="Logo PokeApi" class="logo">
     </div>
 
     <nav id="nav" class="header__nav">
     <ul class="header__nav-list">
         <li class="header__nav-item">
-        <a href="index.html" id="menuHome" class="header__nav-link active"
+        <a href="../index.html" id="menuHome" class="header__nav-link active"
             >Home</a
         >
         </li>
 
         <li class="header__nav-item">
         <a
-            href="pages/products.html"
-            id="menuProducts"
+            href="pages/ahorcado.html"
+            id="menuAhorcado"
             class="header__nav-link"
-            >Products</a
+            >Ahorcado</a
         >
         </li>
 

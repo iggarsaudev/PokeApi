@@ -1,0 +1,129 @@
+/* Reset básico */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+/* Contenedor principal */
+.game {
+  max-width: 600px;
+  margin: 40px auto;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Contenedor de la imagen del Pokémon */
+.game__pokemon-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+/* Imagen oculta antes de cargar */
+.game__pokemon-image {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  opacity: 0; /* Oculta la imagen inicial para evitar el flash */
+  transition: filter 0.5s, opacity 0.5s ease-in-out;
+}
+
+/* Una vez cargada la imagen, se muestra como silueta */
+.silueta {
+  filter: brightness(0) contrast(0);
+  opacity: 1;
+}
+
+/* Cuando se acierta, la imagen se muestra normal */
+.revelado {
+  filter: none;
+  opacity: 1;
+}
+
+/* Contenedor de la palabra oculta */
+.game__word-display {
+  font-size: 24px;
+  letter-spacing: 8px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Letras del teclado */
+.game__letters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.game__letter {
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  background-color: #007BFF;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.game__letter:hover {
+  background-color: #0056b3;
+}
+
+.game__letter:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Mensaje de estado */
+.game__status-message {
+  font-size: 20px;
+  font-weight: bold;
+  color: #28a745;
+  margin-top: 20px;
+}
+
+.game__ahorcado {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.game__ahorcado-img {
+  width: 150px;
+  height: auto;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Estilo para el botón de reinicio */
+.game__restart-btn {
+  background-color: #ff5733; /* Color de fondo */
+  color: white; /* Color del texto */
+  font-size: 18px; /* Tamaño de la fuente */
+  padding: 10px 20px; /* Espaciado interno */
+  border: none; /* Sin borde */
+  border-radius: 5px; /* Bordes redondeados */
+  cursor: pointer; /* Puntero cuando el ratón está sobre el botón */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Transición para el cambio de color y la transformación */
+  margin-top: 20px; /* Separación del botón superior */
+}
+
+/* Efecto cuando el ratón pasa por encima */
+.game__restart-btn:hover {
+  background-color: #ff2a00; /* Cambio de color al pasar el ratón */
+  transform: scale(1.1); /* Aumenta ligeramente el tamaño */
+}
+
+/* Efecto cuando el botón es presionado */
+.game__restart-btn:active {
+  background-color: #e6412d; /* Color más oscuro cuando se presiona */
+  transform: scale(1); /* Restablece el tamaño */
+}
