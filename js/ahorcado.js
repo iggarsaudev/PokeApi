@@ -124,5 +124,14 @@ function reiniciarJuego() {
   document.querySelector(".game__status-message").textContent = ""; // Limpiar mensaje
   document.querySelector(".game__ahorcado-img").src = "../assets/img/0.png"; // Resetear imagen del ahorcado
   
-  iniciarJuego(); // Volver a empezar el juego
+  // Obtener la imagen del Pokémon y restablecer su estado
+  const imagenPokemon = document.querySelector(".game__pokemon-image");
+  imagenPokemon.src = ""; // Se limpia la imagen para evitar el flash
+  imagenPokemon.classList.remove("revelado"); // Se elimina la clase que lo muestra completamente
+  imagenPokemon.classList.add("silueta"); // Se vuelve a aplicar la silueta
+
+  // Restablecer letras disponibles
+  document.querySelector(".game__letters").innerHTML = "";
+
+  iniciarJuego(); // Volver a empezar el juego  
 }
