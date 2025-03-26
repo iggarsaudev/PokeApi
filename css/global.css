@@ -5,21 +5,26 @@
 
 /* Fonts */
 @font-face {
-  font-family: 'PokemonHollow';
-  src: url('../assets/fonts/PokemonHollow.ttf') format('truetype');
+  font-family: "PokemonHollow";
+  src: url("../assets/fonts/PokemonHollow.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: 'PokemonSolid';
-  src: url('../assets/fonts/PokemonSolid.ttf') format('truetype');
+  font-family: "PokemonSolid";
+  src: url("../assets/fonts/PokemonSolid.ttf") format("truetype");
 }
 /* End Fonts */
 
+/* Reset básico */
 body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
   background-color: #f8f9fa;
   /* font-family: 'PokemonHollow', sans-serif; */
+  text-align: center;
+  margin: 0;
+  padding: 0;
 }
-
 /* Global para controlar el footer */
 .global {
   display: flex;

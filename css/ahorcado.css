@@ -1,19 +1,10 @@
-/* Reset básico */
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
-  text-align: center;
-  margin: 0;
-  padding: 0;
-}
-
 /* Contenedor principal */
 .game {
-  max-width: 600px;
-  margin: 40px auto;
+  max-width: 37.5rem;
+  margin: 2.5rem auto;
   background: white;
-  padding: 20px;
-  border-radius: 10px;
+  padding: 1.25rem;
+  border-radius: 0.6rem;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -21,13 +12,13 @@ body {
 .game__pokemon-container {
   display: flex;
   justify-content: center;
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
 }
 
 /* Imagen oculta antes de cargar */
 .game__pokemon-image {
-  width: 150px;
-  height: 150px;
+  width: 9rem;
+  height: 9rem;
   object-fit: contain;
   opacity: 0; /* Oculta la imagen inicial para evitar el flash */
   transition: filter 0.5s, opacity 0.5s ease-in-out;
@@ -47,28 +38,28 @@ body {
 
 /* Contenedor de la palabra oculta */
 .game__word-display {
-  font-size: 24px;
-  letter-spacing: 8px;
+  font-size: 1.5rem;
+  letter-spacing: 0.5rem;
   font-weight: bold;
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
 }
 
 /* Letras del teclado */
 .game__letters {
   display: flex;
   flex-wrap: wrap;
-  gap: 5px;
+  gap: 0.4rem;
   justify-content: center;
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
 }
 
 .game__letter {
-  font-size: 18px;
-  padding: 10px;
+  font-size: 1.2rem;
+  padding: 0.6rem;
   border: none;
-  background-color: #007BFF;
+  background-color: #007bff;
   color: white;
-  border-radius: 5px;
+  border-radius: 0.3rem;
   cursor: pointer;
   transition: 0.3s;
 }
@@ -84,21 +75,21 @@ body {
 
 /* Mensaje de estado */
 .game__status-message {
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: bold;
   color: #28a745;
-  margin-top: 20px;
+  margin-top: 1.25rem;
 }
 
 .game__ahorcado {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
 }
 
 .game__ahorcado-img {
-  width: 150px;
+  width: 9.5rem;
   height: auto;
   transition: opacity 0.3s ease-in-out;
 }
@@ -107,13 +98,13 @@ body {
 .game__restart-btn {
   background-color: #ff5733; /* Color de fondo */
   color: white; /* Color del texto */
-  font-size: 18px; /* Tamaño de la fuente */
-  padding: 10px 20px; /* Espaciado interno */
+  font-size: 1.2rem; /* Tamaño de la fuente */
+  padding: 0.6rem 1.2rem; /* Espaciado interno */
   border: none; /* Sin borde */
-  border-radius: 5px; /* Bordes redondeados */
+  border-radius: 0.3rem; /* Bordes redondeados */
   cursor: pointer; /* Puntero cuando el ratón está sobre el botón */
   transition: background-color 0.3s ease, transform 0.3s ease; /* Transición para el cambio de color y la transformación */
-  margin-top: 20px; /* Separación del botón superior */
+  margin-top: 1.2rem; /* Separación del botón superior */
 }
 
 /* Efecto cuando el ratón pasa por encima */

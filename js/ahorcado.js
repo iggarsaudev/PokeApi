@@ -2,7 +2,9 @@ document.addEventListener("DOMContentLoaded", () => {
   iniciarJuego();
 
   // Escuchar evento del botón de reinicio
-  document.querySelector(".game__restart-btn").addEventListener("click", reiniciarJuego);
+  document
+    .querySelector(".game__restart-btn")
+    .addEventListener("click", reiniciarJuego);
 });
 
 let palabraActual = "";
@@ -22,12 +24,14 @@ async function iniciarJuego() {
 async function obtenerPokemonAleatorio() {
   try {
     const idAleatorio = Math.floor(Math.random() * 151) + 1; // Solo 1ª generación
-    const respuesta = await fetch(`https://pokeapi.co/api/v2/pokemon/${idAleatorio}`);
+    const respuesta = await fetch(
+      `https://pokeapi.co/api/v2/pokemon/${idAleatorio}`
+    );
     const datos = await respuesta.json();
 
     return {
       name: datos.name,
-      image: datos.sprites.other["official-artwork"].front_default
+      image: datos.sprites.other["official-artwork"].front_default,
     };
   } catch (error) {
     console.error("Error al obtener el Pokémon:", error);
@@ -75,7 +79,8 @@ function manejarAdivinanza(letra, boton) {
 }
 
 function actualizarPalabraMostrada() {
-  document.querySelector(".game__word-display").textContent = letrasAdivinadas.join(" ");
+  document.querySelector(".game__word-display").textContent =
+    letrasAdivinadas.join(" ");
 }
 
 function mostrarMensaje(mensaje) {
@@ -94,7 +99,7 @@ let errores = 0;
 // Función para actualizar la imagen del ahorcado según los errores
 function actualizarAhorcado() {
   const ahorcadoImg = document.querySelector(".game__ahorcado-img");
-  ahorcadoImg.src = `../assets/img/${errores}.png`;
+  ahorcadoImg.src = `../assets/img/ahorcado/${errores}.png`;
 }
 
 // Función que se ejecuta cuando el jugador falla una letra
@@ -106,7 +111,9 @@ function manejarFallo() {
 
   if (errores === maxErrores) {
     // Si llegó al máximo de fallos, mostrar mensaje de derrota
-    mostrarMensaje("¡Has perdido! El Pokémon era " + palabraActual.toUpperCase());
+    mostrarMensaje(
+      "¡Has perdido! El Pokémon era " + palabraActual.toUpperCase()
+    );
     revelarPokemon();
     deshabilitarLetras();
   }
@@ -123,7 +130,7 @@ function reiniciarJuego() {
   letrasAdivinadas = []; // Vaciar letras adivinadas
   document.querySelector(".game__status-message").textContent = ""; // Limpiar mensaje
   document.querySelector(".game__ahorcado-img").src = "../assets/img/0.png"; // Resetear imagen del ahorcado
-  
+
   // Obtener la imagen del Pokémon y restablecer su estado
   const imagenPokemon = document.querySelector(".game__pokemon-image");
   imagenPokemon.src = ""; // Se limpia la imagen para evitar el flash
@@ -133,5 +140,5 @@ function reiniciarJuego() {
   // Restablecer letras disponibles
   document.querySelector(".game__letters").innerHTML = "";
 
-  iniciarJuego(); // Volver a empezar el juego  
+  iniciarJuego(); // Volver a empezar el juego
 }

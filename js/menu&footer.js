@@ -1,11 +1,11 @@
-let salida = ""
+let salida = "";
 
 // Construimos el menú
-const header = document.getElementById("header")
+const header = document.getElementById("header");
 
 salida = `
     <div class="header__logo">
-        <img src="../img/logo.png" alt="Logo PokeApi" class="logo">
+        <img src="../assets/img/logo.png" alt="Logo PokeApi" class="logo">
     </div>
 
     <nav id="nav" class="header__nav">
@@ -61,17 +61,17 @@ salida = `
         >close</span
     >
     </button>
-`
+`;
 
-header.innerHTML = salida
+header.innerHTML = salida;
 
 // Construimos el footer
-const footer = document.getElementById("footer")
+const footer = document.getElementById("footer");
 
 salida = `
     <p class="footer__info">
         &copy; 2025 iggarsauDev
     </p>
-`
+`;
 
-footer.innerHTML = salida
+footer.innerHTML = salida;
